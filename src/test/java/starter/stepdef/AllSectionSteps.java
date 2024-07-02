@@ -23,8 +23,4 @@ public class AllSectionSteps {
         SerenityRest.when().get(TodoisAPI.ALL_SECTION);
     }
 
-    @Then("Status code should be {int}")
-    public void statusCodeShouldBe(int statusCode) {
-        SerenityRest.then().statusCode(statusCode);
-    }
 }
