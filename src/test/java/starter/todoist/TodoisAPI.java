@@ -14,7 +14,7 @@ public class TodoisAPI {
     }
     @Step("Get All Section")
         public void getAllSection(int id) {
-        SerenityRest.given().pathParam("id", id);
+        SerenityRest.given().pathParam("id", id).header("Authorization", "Bearer 57e368f4bd3f67568f2eb2b002104f6887390d9b");
     }
 
 }
