@@ -33,5 +33,29 @@ public class GetAllProjectSteps {
     public void responseBodyIdShouldBe(String id) {
         SerenityRest.and().body(TodoisResponses.ID,equalTo(id));
     }
+    @When("Send request get all project invalid")
+    public void sendRequestGetAllProjectInvalid() {
+        SerenityRest.when().get("https://api.todoist.com/rest/v2/projectsdf");
+    }
+    @Given("Get all project with invalid parameter")
+    public void getAllProjectWithInvalidParameter() {
+        todoisAPI.getAllProject();
+    }
 
+
+    @And("Response body error should be {string}")
+    public void responseBodyErrorShouldBe(String error) {
+        SerenityRest.and().body(TodoisResponses.ERROR,equalTo(error));
+    }
+
+    @Given("Get all project with invalid token")
+    public void getAllProjectWithInvalidToken() {
+        SerenityRest.given()
+                .header("Authorization", "Bearer kasjd");
+    }
+
+    @And("Response body error should be Forbidden")
+    public void responseBodyErrorShouldBeForbidden() {
+        SerenityRest.and().body(equalTo("Forbidden"));
+    }
 }

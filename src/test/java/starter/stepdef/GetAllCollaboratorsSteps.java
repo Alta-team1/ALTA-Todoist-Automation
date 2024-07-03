@@ -30,4 +30,14 @@ public class GetAllCollaboratorsSteps {
                 .body(TodoisResponses.NAMA,equalTo(name))
                 .body(TodoisResponses.EMAIL,equalTo(email));
     }
+
+    @Given("Get all collaborators with valid id {string} and invalid parameter")
+    public void getAllCollaboratorsWithValidIdAndInvalidParameter(String id) {
+        todoisAPI.getAllCollaborators(id);
+    }
+
+    @When("Send request get all collaborators invalid parameter")
+    public void sendRequestGetAllCollaboratorsInvalidParameter() {
+        SerenityRest.when().get(TodoisAPI.GET_ALL_COLLABORATOR+ "sd");
+    }
 }

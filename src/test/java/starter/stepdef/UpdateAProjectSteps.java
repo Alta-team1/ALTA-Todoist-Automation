@@ -13,14 +13,14 @@ public class UpdateAProjectSteps {
     @Steps
     TodoisAPI todoisAPI;
 
-    @Given("Update a project with json file {string} and id {string}")
+    @Given("Update a project with id {string} and json file {string}")
     public void updateAProjectWithJsonFile(String fileName, String id) {
         File jsonFile = new File(Constants.REQ_BODY + fileName);
-        todoisAPI.updateAProject(jsonFile, id);
+        todoisAPI.updateAProject(id, jsonFile);
     }
 
     @When("Send request update a project")
     public void sendRequestUpdateAProject() {
-        SerenityRest.when().get(TodoisAPI.UPDATE_PROJECT);
+        SerenityRest.when().post(TodoisAPI.GET_PROJECT);
     }
 }

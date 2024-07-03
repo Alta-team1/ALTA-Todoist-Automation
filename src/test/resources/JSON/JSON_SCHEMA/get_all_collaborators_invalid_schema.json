@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "error": {
+      "type": "string"
+    },
+    "error_code": {
+      "type": "integer"
+    },
+    "error_extra": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "null"
+        },
+        "retry_after": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "event_id",
+        "retry_after"
+      ]
+    },
+    "error_tag": {
+      "type": "string"
+    },
+    "http_code": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "error",
+    "error_code",
+    "error_extra",
+    "error_tag",
+    "http_code"
+  ]
+}

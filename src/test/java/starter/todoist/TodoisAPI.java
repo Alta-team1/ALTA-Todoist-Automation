@@ -12,7 +12,6 @@ public class TodoisAPI {
     public static String ALL_PROJECT = Constants.BASE_URL + "/rest/v2/projects";
     public static String CREATE_NEW_PROJECT = Constants.BASE_URL + "/rest/v2/projects";
     public static String GET_PROJECT = Constants.BASE_URL + "/rest/v2/projects/{id_project}";
-    public static String UPDATE_PROJECT = Constants.BASE_URL + "/rest/v2/projects/{id_project}";
     public static String DELETE_PROJECT = Constants.BASE_URL + "/rest/v2/projects/{id_project}";
     public static String GET_ALL_COLLABORATOR = Constants.BASE_URL + "/rest/v2/projects/{id_project}/collaborators";
     public static String ALL_SECTION = Constants.BASE_URL + "/rest/v2/sections?id={id}";
@@ -36,11 +35,11 @@ public class TodoisAPI {
                 .header("Authorization", "Bearer 57e368f4bd3f67568f2eb2b002104f6887390d9b");
     }
     @Step ("Update a project")
-    public void updateAProject(File json, String id){
+    public void updateAProject(String id, File json){
         SerenityRest.given()
+                .pathParam("id_project", id)
                 .body(ContentType.JSON)
                 .body(json)
-                .pathParam("id_project", id)
                 .header("Authorization", "Bearer 57e368f4bd3f67568f2eb2b002104f6887390d9b");
     }
     @Step ("Delete a project")
