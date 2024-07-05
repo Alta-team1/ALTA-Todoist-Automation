@@ -34,12 +34,12 @@ public class TodoisAPI {
                 .header("Authorization", "Bearer 57e368f4bd3f67568f2eb2b002104f6887390d9b");
     }
     @Step ("Update a project")
-    public void updateAProject(String id, File json){
+    public void updateAProject(File json, String id){
         SerenityRest.given()
                 .pathParam("id_project", id)
+                .header("Authorization", "Bearer 57e368f4bd3f67568f2eb2b002104f6887390d9b")
                 .body(ContentType.JSON)
-                .body(json)
-                .header("Authorization", "Bearer 57e368f4bd3f67568f2eb2b002104f6887390d9b");
+                .body(json);
     }
     @Step ("Delete a project")
     public void deleteAProject(String id){

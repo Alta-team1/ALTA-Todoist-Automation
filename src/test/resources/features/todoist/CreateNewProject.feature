@@ -1,3 +1,4 @@
+@Projects
 Feature: Create a new project
   Scenario: Create a new project with valid data
     Given Create new project with file json "create_project.json"

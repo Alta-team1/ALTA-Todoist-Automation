@@ -16,5 +16,5 @@ Feature: Update a project
 #  Given Update a project with file json "update_project_invalid.json" and id "2335599268"
 #    When Send request update a project
 #    Then Status code should be 400
-#    And Response body erorr should be "Bad Request"
+#    And Response body error should be "Bad Request"
 #    And Validate json schema "update_project_schema.json"
