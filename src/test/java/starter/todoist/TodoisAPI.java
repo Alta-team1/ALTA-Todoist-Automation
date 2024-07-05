@@ -1,6 +1,5 @@
 package starter.todoist;
 
-import io.cucumber.java.eo.Se;
 import io.restassured.http.ContentType;
 import net.serenitybdd.rest.SerenityRest;
 import starter.utils.Constants;
