@@ -1,4 +1,6 @@
 Feature: Update a project
+
+  @Tugas
   Scenario: Update a project with valid data & id
     Given Update a project with json file "update_project.json" and id "2335599268"
     When Send request update a project

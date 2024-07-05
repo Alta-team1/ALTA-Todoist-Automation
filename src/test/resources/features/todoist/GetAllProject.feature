@@ -1,4 +1,6 @@
 Feature: Get All Project
+
+  @Tugas
   Scenario: Get all project with valid parameter
     Given Get all project with valid parameter & token
     When Send request get all project
@@ -6,13 +8,15 @@ Feature: Get All Project
     And Response body id should be "2335537756"
     And Validate json schema "all_project_schema.json"
 
-  Scenario: Get all project with invalid parameter
+  @Tugas
+   Scenario: Get all project with invalid parameter
     Given Get all project with invalid parameter
     When Send request get all project invalid
     Then Status code should be 404
     And Response body error should be "Not found"
     And Validate json schema "all_project_invalid_schema.json"
 
+  @Tugas
   Scenario: Get all project with invalid token
     Given Get all project with invalid token
     When Send request get all project
