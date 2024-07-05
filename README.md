@@ -8,9 +8,9 @@ Automation Testing Todoist API menggunakan serenity dengan resources project & s
 https://docs.google.com/spreadsheets/d/1DfizOGkGxYojBTK5YJ8GQrxHzeyBTgHld5FrK15-gjM/edit?gid=730560582#gid=730560582
 
 ## Gambar Report Test Overall
-
+(src/docs/hasiltest.png)
 ## Gambar Coverage Tiap Fitur (jika ada).
-
+(src/docs/hasiltestcoverage.png)
 ## Tools & Technology Stack
 * Spreadsheet
 * Postman
@@ -21,7 +21,7 @@ https://docs.google.com/spreadsheets/d/1DfizOGkGxYojBTK5YJ8GQrxHzeyBTgHld5FrK15-
 * Cucumber
 * Maven
 * Rest Assured
-* 
+
 ## How To Run Project
 
 ## Team Member
