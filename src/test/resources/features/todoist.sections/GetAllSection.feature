@@ -16,4 +16,14 @@ Feature: Get all section
     When  Send request get all section error
     Then Status code should be 404
     And Validate response error body "Not found"
+    And Validate json schema "get_all_section_not_found_json_schema.json"
+
+  @Tugas
+  Scenario: Get all section with special character
+    Given Get all section with parameter
+    When  Send request get all section error with special character
+    Then Status code should be 404
+    And Validate response error body "Not found"
+    And Validate json schema "get_all_section_not_found_json_schema.json"
+
 

@@ -11,6 +11,7 @@ public class TodoisAPI {
     public static String ALL_PROJECT = Constants.BASE_URL + "/rest/v2/projects";
     public static String ALL_SECTION = Constants.BASE_URL + "/rest/v2/sections";
     public static String ALL_ERROR_SECTION = Constants.BASE_URL + "/rest/v2/section";
+    public static String ALL_ERROR_SECTION_SPECIAL_CHARACTER = Constants.BASE_URL + "/rest/v2/section!@#$";
     public static String SINGLE_SECTION = Constants.BASE_URL + "/rest/v2/sections/{id}";
     public static String CREATE_SECTION = Constants.BASE_URL + "/rest/v2/sections";
     public static String UPDATE_SECTION = Constants.BASE_URL + "/rest/v2/sections/{id}";

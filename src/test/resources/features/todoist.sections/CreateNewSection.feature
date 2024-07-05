@@ -18,7 +18,7 @@ Feature: Create new section
     And Validate response error body Name is required
 
   @Tugas
-  Scenario: Create a section with valid request
+  Scenario: Create a section with empty id project
     Given Post create a new section with file json "create_section_empty_id_project.json"
     When Send request post create section
     Then Status code should be 400

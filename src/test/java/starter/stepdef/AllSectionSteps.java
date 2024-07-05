@@ -36,5 +36,8 @@ public class AllSectionSteps {
     }
 
 
-
+    @When("Send request get all section error with special character")
+    public void sendRequestGetAllSectionErrorWithSpecialCharacter() {
+        SerenityRest.when().get(TodoisAPI.ALL_ERROR_SECTION_SPECIAL_CHARACTER);
+    }
 }

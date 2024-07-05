@@ -23,3 +23,10 @@ Feature: Get single Section
     When Send request get single user
     Then Status code should be 404
     And Validate response error body Section not found
+
+  @Tugas
+  Scenario: Get single section with valid parameter
+    Given Get single section with parameter "00000000000"
+    When Send request get single user
+    Then Status code should be 400
+    And Validate response error body Invalid argument value
