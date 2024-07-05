@@ -23,12 +23,50 @@ public class TodoisAPI {
     public static String SINGLE_LABEL = Constants.BASE_URL + "/rest/v2/labels/{id}";
     public static String UPDATE_LABEL = Constants.BASE_URL + "/rest/v2/labels/2173899238";
     public static String DELETE_LABEL = Constants.BASE_URL + "/rest/v2/labels/{id}";
+    public static String CREATE_NEW_PROJECT = Constants.BASE_URL + "/rest/v2/projects";
+    public static String GET_PROJECT = Constants.BASE_URL + "/rest/v2/projects/{id_project}";
+    public static String DELETE_PROJECT = Constants.BASE_URL + "/rest/v2/projects/{id_project}";
+    public static String GET_ALL_COLLABORATOR = Constants.BASE_URL + "/rest/v2/projects/{id_project}/collaborators";
 
 
     @Step ("Get All Project")
     public void getAllProject (){
         SerenityRest.given().header("Authorization", "Bearer 7f1a376ed34de7f1f3e89025397cdbb5b7320104");
     }
+    @Step ("Create New Project")
+    public void createNewProject(File json){
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json)
+                .header("Authorization", "Bearer 57e368f4bd3f67568f2eb2b002104f6887390d9b");
+    }
+    @Step ("Get a Project")
+    public void getAPorject(String id){
+        SerenityRest.given()
+                .pathParam("id_project", id)
+                .header("Authorization", "Bearer 57e368f4bd3f67568f2eb2b002104f6887390d9b");
+    }
+    @Step ("Update a project")
+    public void updateAProject(String id, File json){
+        SerenityRest.given()
+                .pathParam("id_project", id)
+                .body(ContentType.JSON)
+                .body(json)
+                .header("Authorization", "Bearer 57e368f4bd3f67568f2eb2b002104f6887390d9b");
+    }
+    @Step ("Delete a project")
+    public void deleteAProject(String id){
+        SerenityRest.given()
+                .pathParam("id_project", id)
+                .header("Authorization", "Bearer 57e368f4bd3f67568f2eb2b002104f6887390d9b");
+    }
+    @Step("Get all colaborators")
+    public void getAllCollaborators(String id){
+        SerenityRest.given()
+                .pathParam("id_project", id)
+                .header("Authorization", "Bearer 57e368f4bd3f67568f2eb2b002104f6887390d9b");
+    }
+
     @Step("Get All Section")
         public void getAllSection() {
         SerenityRest.given().header("Authorization", "Bearer 7f1a376ed34de7f1f3e89025397cdbb5b7320104");
