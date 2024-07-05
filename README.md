@@ -1,9 +1,29 @@
-# Getting started with REST API testing with Serenity and Cucumber 6
+# Todoist API Testing with Serenity By Team 1 (Rizki, Rafi)
+Tugas ini dibuat untuk menyelesaikan group project Alterra Academy Immersive Program Quality Engineering Batch 15
 
-This is a simple starter project for Serenity with Cucumber 6 and RestAssured
+## Deskripsi Project
+Automation Testing Todoist API menggunakan serenity dengan resources project & section
 
-## Want to learn more?
-For more information about Serenity BDD, you can read the [**Serenity BDD Book**](https://serenity-bdd.github.io/theserenitybook/latest/index.html), the official online Serenity documentation source. Other sources include:
-* **[Byte-sized Serenity BDD](https://www.youtube.com/channel/UCav6-dPEUiLbnu-rgpy7_bw/featured)** - tips and tricks about Serenity BDD
-* [**Serenity BDD Blog**](https://johnfergusonsmart.com/category/serenity-bdd/) - regular articles about Serenity BDD
-* [**The Serenity Dojo**](https://www.serenity-dojo.com) - Tailored BDD and Test Automation Training and Mentoring
+## Link Test Case Manual
+https://docs.google.com/spreadsheets/d/1DfizOGkGxYojBTK5YJ8GQrxHzeyBTgHld5FrK15-gjM/edit?gid=730560582#gid=730560582
+
+## Gambar Report Test Overall
+
+## Gambar Coverage Tiap Fitur (jika ada).
+
+## Tools & Technology Stack
+* Spreadsheet
+* Postman
+* Intel IJ IDEA
+* Java
+* Serenity BDD
+* Gherkin
+* Cucumber
+* Maven
+* Rest Assured
+* 
+## How To Run Project
+
+## Team Member
+* Rizki Imaddudin
+* Rafii Malfa
