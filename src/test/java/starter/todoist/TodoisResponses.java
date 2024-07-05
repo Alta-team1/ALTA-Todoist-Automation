@@ -11,4 +11,5 @@ public class TodoisResponses {
     public static String LABEL_NAME = "name";
     public static String NAMA = "name[0]";
     public static String EMAIL = "email[0]";
+    public static String NAMEPROJECT = "name";
 }

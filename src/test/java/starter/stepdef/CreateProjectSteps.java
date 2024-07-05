@@ -28,7 +28,7 @@ public class CreateProjectSteps {
 
     @And("Response body name should be {string}")
     public void responseBodyNameShouldBe(String name) {
-        SerenityRest.and().body(TodoisResponses.NAME,equalTo(name));
+        SerenityRest.and().body(TodoisResponses.NAMEPROJECT,equalTo(name));
     }
 
 
