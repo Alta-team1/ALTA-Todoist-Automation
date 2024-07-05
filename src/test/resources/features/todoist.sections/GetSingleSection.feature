@@ -7,7 +7,7 @@ Feature: Get single Section
     When Send request get single user
     Then Status code should be 200
     And Validate response single response body "159832996"
-    And Validate json schema "get_single_json_schema.json"
+    And Validate json schema "get_single_section_json_schema.json"
 
 #  Negative Case
   @Tugas
